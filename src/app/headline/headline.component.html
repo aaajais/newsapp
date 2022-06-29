@@ -1,4 +1,4 @@
-<div calss="container-fluid">
+<!-- <div calss="container-fluid">
     <div class="row-mt-8">
             <div class="card">
             <div *ngFor="let nd of topheadlineData" class="col-lg-3">
@@ -11,4 +11,22 @@
         </div>
     </div>
     </div>
+</div> -->
+<div class="grid-container">
+    
+    <div *ngFor="let nd of topheadlineData">
+        <div class="card" style="width: 15rem;">
+            <img src={{nd.urlToImage}} class="card-img-top" alt="Loading..">
+
+            <div class="card-body">
+                <h5>{{nd.headlineData}}</h5>
+                <p>{{nd.content}}</p>
+                <a class="more" href="{{nd.url}}">Read More</a>
+
+            </div>
+        </div>
+    </div>
+
+
+
 </div>
